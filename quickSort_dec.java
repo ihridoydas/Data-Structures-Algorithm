@@ -1,6 +1,6 @@
-public class quickSort {
-    private static void QuickSort(int[] arr, int left, int right) {
+public class quickSort_dec {
 
+    private static void QuickSort(int[] arr, int left, int right) {     
         int index = partition(arr, left, right);
 
         if (left < index - 1)
@@ -11,11 +11,10 @@ public class quickSort {
     }
 
     private static int partition(int[] arr, int left, int right) {
+        int pivot = arr[left];
 
-        int pivot = arr[(left + right) / 2];
         while (left <= right) {
-
-             while (arr[left] < pivot)
+            while (arr[left] < pivot)
                 left++;
             while (arr[right] > pivot)
                 right--;
@@ -28,17 +27,18 @@ public class quickSort {
                 left++;
                 right--;
             }
-        }
-        return left;
 
+        }
+
+        return left;
     }
 
     public static void main(String[] args) {
-        int[] array = new int[]{ 10, 9, 8, 3, 34, 32, 5, 67, 45 };
+
+        int[] array = new int[] { 24,2,45,20,56,99,2,56,101,53,12};
 
         QuickSort(array, 0, array.length - 1);
-        for (int i = 0; i < array.length - 1; i++) {
-
+        for (int i = 0; i < array.length - 1;i++) {
             System.out.print(array[i] + "  ");
         }
 
