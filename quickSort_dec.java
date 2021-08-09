@@ -1,4 +1,4 @@
-import java.util.Arrays;
+
 public class quickSort_dec
 {
    public static void quickSort(Integer[] array, int lowest, int highest) 
@@ -16,11 +16,11 @@ public class quickSort_dec
          int i = lowest, j = highest;
          while (i <= j)
          {
-             while (array[i] < pivot) 
+             while (array[i] > pivot) 
              {
                  i++;
              }
-             while (array[j] > pivot) 
+             while (array[j] < pivot) 
              {
                  j--;
              }
