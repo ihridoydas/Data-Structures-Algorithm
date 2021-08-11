@@ -18,7 +18,7 @@ public class quickSort_dec {
         // while (array[j] > pivot)
         //     j--;
 
-        int pivot = array[left];
+        int pivot =arr[(left + right) / 2];
 
         int i = left, j = right;
         while (i <= j) {
